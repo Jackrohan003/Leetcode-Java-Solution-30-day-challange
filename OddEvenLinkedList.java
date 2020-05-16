@@ -25,7 +25,7 @@ class Solution {
                 odd.next = even.next;
             else
             {
-                odd.next = h_even;
+                odd.next = h_even; 
                 return h_odd;
             }
             odd = odd.next;
