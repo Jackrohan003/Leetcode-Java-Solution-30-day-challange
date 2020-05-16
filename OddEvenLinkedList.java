@@ -38,3 +38,21 @@ class Solution {
               return h_odd;
     }
 }
+// Second and Easy Approach !!
+class Solution {
+    public ListNode oddEvenList(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode first = head, second = head.next, secondhead = second;
+        while (first != null && second != null && first.next != null && second.next != null) {
+            first.next = second.next;
+            second.next = first.next.next;
+            first = first.next;
+            second = second.next;
+        }
+        
+        first.next = secondhead;
+        return head;
+    }
+}
+
+
